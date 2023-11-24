@@ -4,17 +4,22 @@ const btnPlus = document.querySelector('button[data-action="increment"]');
 const btnMin = document.querySelector('button[data-action="decrement"]');
 const allValue = document.querySelector("#value");
 
-let counterValue = 0;
+
+
+let counterValue = {
+    plus: 0,
+    min: 0,
+};
 
 
 const handleclick = event => {
-    counterValue += 1;
-console.log(allValue.textContent = counterValue);
+    counterValue.plus += 1;
+allValue.textContent = counterValue.plus;
 }
 
 const handleclickMin = event => {
-    counterValue -= 1;
-console.log(allValue.textContent = counterValue);
+    counterValue.min -= 1;
+allValue.textContent = counterValue.min;
 }
 
 
